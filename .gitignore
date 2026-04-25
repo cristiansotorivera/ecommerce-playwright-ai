@@ -1,12 +1,18 @@
+# Dependencies
+node_modules/
 
-# Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
-node_modules/
+# Environment variables
 .env
+
+# Playwright outputs
 test-results/
 playwright-report/
+blob-report/
+
+# Playwright internal
+playwright/.cache/
+playwright/.auth/
+
+# Optional (good practice)
+dist/
+coverage/
