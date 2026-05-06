@@ -1,16 +1,10 @@
 import { test } from '../../../src/fixtures/ecommerce.fixture';
 
-test('@smoke @cart user can add backpack to cart', async ({
-  loginPage,
+test('@smoke @cart authenticated user can add backpack to cart', async ({
   productsPage,
   cartPage,
 }) => {
-  await loginPage.open('/');
-
-  await loginPage.login(
-    process.env.TEST_USER_EMAIL || '',
-    process.env.TEST_USER_PASSWORD || ''
-  );
+  await productsPage.open('/inventory.html');
 
   await productsPage.verifyLoaded();
   await productsPage.addBackpackToCart();
