@@ -1,29 +1,47 @@
 # 🛒 Ecommerce Playwright AI Framework
 
-![Playwright](https://img.shields.io/badge/Playwright-Testing-green)
-![TypeScript](https://img.shields.io/badge/TypeScript-Enabled-blue)
-![CI](https://img.shields.io/badge/CI-GitHub_Actions-success)
-![Status](https://img.shields.io/badge/Tests-Smoke_Passing-brightgreen)
+![CI](https://github.com/YOUR_USERNAME/ecommerce-playwright-ai/actions/workflows/playwright.yml/badge.svg)
+![Playwright](https://img.shields.io/badge/Playwright-E2E-green)
+![TypeScript](https://img.shields.io/badge/TypeScript-Framework-blue)
+![AI](https://img.shields.io/badge/AI-Copilot%20%2B%20MCP-purple)
 
-A modern end-to-end testing framework powered by:
-
-* 🎭 Playwright (UI + API testing)
-* 🧠 GitHub Copilot (AI-assisted development)
-* 🤖 MCP (Model Context Protocol for AI agents)
-* ⚡ GitHub Actions (CI/CD)
+A **modern, AI-augmented test automation framework** designed for scalable ecommerce testing.
 
 ---
 
-## 🚀 Features
+## 🚀 Why This Project Matters
 
-* Scalable Playwright framework (TypeScript)
+Most automation frameworks:
+
+* ❌ focus only on test execution
+* ❌ ignore maintainability
+* ❌ don’t leverage AI effectively
+
+This framework solves that by combining:
+
+* 🎭 **Playwright** → reliable browser automation
+* 🧠 **GitHub Copilot** → AI-assisted development
+* 🤖 **MCP (Model Context Protocol)** → AI agents that can run and analyze tests
+* ⚡ **GitHub Actions** → CI/CD automation
+
+👉 Result: a **future-ready QA framework**.
+
+---
+
+## ✨ Key Features
+
+* Scalable **TypeScript Playwright framework**
 * Page Object Model + Fixtures
 * Environment-based configuration (dev / qa / stage)
-* Test tagging (@smoke, @cart, @checkout, etc.)
+* Test tagging strategy (@smoke, @cart, @checkout)
 * Authentication reuse (storage state)
-* GitHub Actions integration
-* AI-ready with Copilot + MCP
-* Custom MCP server for test execution and data access
+* CI/CD pipeline with GitHub Actions
+* AI-ready architecture (Copilot + MCP)
+* Custom MCP server for:
+
+  * running tests
+  * reading test data
+  * analyzing results
 
 ---
 
@@ -57,11 +75,11 @@ Install dependencies:
 
 npm install
 
-Install Playwright browsers:
+Install browsers:
 
 npx playwright install
 
-Create a `.env` file:
+Create `.env` file:
 
 BASE_URL=https://www.saucedemo.com
 API_BASE_URL=https://www.saucedemo.com
@@ -83,32 +101,35 @@ npm run report
 
 ---
 
-## 🔐 Authentication
+## 🔐 Authentication Strategy
 
 * Login runs once in setup project
-* Session reused across tests
+* Session is reused across all tests
+* Improves performance and stability
 
 ---
 
-## 🏷️ Test Tags
+## 🏷️ Test Strategy
 
-@smoke → Critical flows
-@cart → Cart functionality
-@checkout → Checkout flows
-@account → Account features
-@regression → Full regression suite
+@smoke → critical user flows
+@cart → cart functionality
+@checkout → checkout scenarios
+@account → user flows
+@regression → full coverage
 
 ---
 
 ## 🤖 AI + MCP Integration
 
-Playwright MCP:
+### Playwright MCP
 
-* Browser automation
 * UI inspection
 * Locator discovery
+* Browser automation
 
-Ecommerce MCP (Custom Tools):
+### Custom Ecommerce MCP
+
+Tools available:
 
 * run_smoke_tests
 * run_cart_tests
@@ -117,42 +138,51 @@ Ecommerce MCP (Custom Tools):
 * list_test_users
 * get_latest_test_results
 
----
+👉 Enables **AI-driven testing workflows**:
 
-## 🧠 GitHub Copilot
-
-Includes:
-
-* Copilot instructions (.github/copilot-instructions.md)
-* Prompt files (.github/prompts/)
-
-Use Copilot to:
-
-* Generate tests
-* Refactor code
-* Debug flaky tests
+* generate tests
+* run tests
+* analyze failures
 
 ---
 
-## ⚡ CI/CD (GitHub Actions)
+## 🧠 GitHub Copilot Integration
 
-* Runs on push and pull requests
+This project includes:
+
+* Custom instructions
+* Prompt templates
+* Structured workflows
+
+Copilot is used to:
+
+* generate tests
+* refactor code
+* debug flaky tests
+
+---
+
+## ⚡ CI/CD Pipeline
+
+* Runs on push & pull requests
 * Executes smoke tests
 * Uploads reports and results
 
+👉 Ensures continuous validation of the application.
+
 ---
 
-## 📊 Reports
+## 📊 Reporting
 
-* playwright-report/
-* test-results/
-* screenshots, videos, traces on failure
+* HTML reports → playwright-report/
+* Test results → test-results/
+* Debug artifacts → screenshots, videos, traces
 
 ---
 
 ## 📚 Documentation
 
-docs/MCP-USAGE.md
+MCP Guide → docs/MCP-USAGE.md
 
 ---
 
@@ -167,13 +197,13 @@ docs/MCP-USAGE.md
 
 ---
 
-## 🔥 Future Improvements
+## 🔥 Future Enhancements
 
 * Allure reporting
-* Visual testing
-* API contract testing
-* AI-generated test cases
-* Advanced MCP agents
+* Visual regression testing
+* API contract validation
+* AI-generated test suites
+* Advanced failure analysis agents
 
 ---
 
@@ -181,3 +211,26 @@ docs/MCP-USAGE.md
 
 Cristian Soto
 QA Engineer
+
+---
+
+## ⭐ What Makes This Different
+
+This is not just a test framework.
+
+It is:
+
+* ✅ AI-integrated
+* ✅ scalable
+* ✅ CI-ready
+* ✅ built for real-world teams
+
+---
+
+## 📌 Notes
+
+Replace:
+
+YOUR_USERNAME
+
+with your actual GitHub username to activate the CI badge.
