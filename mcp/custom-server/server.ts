@@ -3,6 +3,7 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod';
 import { exec } from 'node:child_process';
 import { promisify } from 'node:util';
+import { getProductsText, getUsersText } from './tools/test-data.tools';
 
 const execAsync = promisify(exec);
 
@@ -76,7 +77,43 @@ server.registerTool(
     };
   }
 );
+server.registerTool(
+  'list_test_products',
+  {
+    title: 'List Test Products',
+    description: 'Returns available ecommerce product test data.',
+    inputSchema: {},
+  },
+  async () => {
+    return {
+      content: [
+        {
+          type: 'text',
+          text: getProductsText(),
+        },
+      ],
+    };
+  }
+);
 
+server.registerTool(
+  'list_test_users',
+  {
+    title: 'List Test Users',
+    description: 'Returns available ecommerce user test data.',
+    inputSchema: {},
+  },
+  async () => {
+    return {
+      content: [
+        {
+          type: 'text',
+          text: getUsersText(),
+        },
+      ],
+    };
+  }
+);
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
