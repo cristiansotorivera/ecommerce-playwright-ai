@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { exec } from 'node:child_process';
 import { promisify } from 'node:util';
 import { getProductsText, getUsersText } from './tools/test-data.tools';
+import { getLatestTestResultsSummary } from './tools/report.tools';
 
 const execAsync = promisify(exec);
 
@@ -118,6 +119,25 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
 }
+
+server.registerTool(
+  'get_latest_test_results',
+  {
+    title: 'Get Latest Test Results',
+    description: 'Returns a summary of files from the latest Playwright test-results folder.',
+    inputSchema: {},
+  },
+  async () => {
+    return {
+      content: [
+        {
+          type: 'text',
+          text: getLatestTestResultsSummary(),
+        },
+      ],
+    };
+  }
+);
 
 main().catch((error) => {
   console.error(error);
