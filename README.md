@@ -1,6 +1,6 @@
 # 🛒 Ecommerce Playwright AI Framework
 
-![CI](https://github.com/YOUR_USERNAME/ecommerce-playwright-ai/actions/workflows/playwright.yml/badge.svg)
+![CI](https://github.com/cristiansotorivera/ecommerce-playwright-ai/actions/workflows/playwright.yml/badge.svg)
 ![Playwright](https://img.shields.io/badge/Playwright-E2E-green)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Framework-blue)
 ![AI](https://img.shields.io/badge/AI-Copilot%20%2B%20MCP-purple)
@@ -227,10 +227,4 @@ It is:
 
 ---
 
-## 📌 Notes
 
-Replace:
-
-YOUR_USERNAME
-
-with your actual GitHub username to activate the CI badge.
