@@ -3,6 +3,10 @@
     "playwright": {
       "command": "npx",
       "args": ["@playwright/mcp@latest"]
+    },
+    "ecommerce-framework": {
+      "command": "npm",
+      "args": ["run", "mcp:ecommerce"]
     }
   }
 }
